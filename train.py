@@ -91,9 +91,9 @@ from bunch import *
 s = Bunch()
 s.data = [[Img1], [Img2], [Img3]]
 
-ind1 = ~(np.any(Img1, axis=1)).astype(int)
-ind2 = ~(np.any(Img2, axis=1)).astype(int)
-ind3 = ~(np.any(Img3, axis=1)).astype(int)
+ind1 = np.any(Img1, axis=1).astype(int)
+ind2 = np.any(Img2, axis=1).astype(int)
+ind3 = np.any(Img3, axis=1).astype(int)
 we = np.array(list(zip(ind1, ind2, ind3)), dtype='float32')
 we = torch.tensor(we)
 
