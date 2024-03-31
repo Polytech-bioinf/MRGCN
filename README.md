@@ -4,7 +4,7 @@ Code of MRGCN:Cancer subtyping with multi-reconstruction gragh convolutional net
 
 train consensus representation
 ```
-#networks.py is used to learn consensus representation
+#train.py is used to learn consensus representation
 #the models are saved in train_models
 ```
 
