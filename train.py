@@ -67,7 +67,7 @@ def comp(g):
     d = np.diag(g.sum(axis=1))
     d = torch.tensor(d)
     s = pow(d, -0.5)
-    where_are_inf = np.isinf(s)
+    where_are_inf = torch.isinf(s)
     s[where_are_inf] = 0
     s = torch.matmul(torch.matmul(s, g), s).to(torch.float32)
     return s
